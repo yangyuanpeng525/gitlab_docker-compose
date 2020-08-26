@@ -1,0 +1,16 @@
+version : '3.7'
+services:
+  gitlab:
+        container_name : gitlab
+        hostname: gitlab
+        image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/gitlab-ce:12.10.5-ce.0
+        volumes:
+           - ./gitlab/conf:/etc/gitlab
+           - ./log:/var/log/gitlab
+           - ./data:/var/opt/gitlab
+        ports:
+                - 86:80
+        restart: always
+        environment:
+          TZ: Asia/Shanghai
+#默认root/admin123
