@@ -13,4 +13,4 @@ services:
         restart: always
         environment:
           TZ: Asia/Shanghai
-#默认root/admin123
+#默认root用户，登录需要设置密码
